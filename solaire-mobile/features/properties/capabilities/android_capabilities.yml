@@ -1,0 +1,15 @@
+desired_caps = {
+:caps: caps,
+  :platformName: 'Android'
+  :deviceName: 'Android'
+  :browserName: ''
+  :version: '4.2'
+  #TODO add app activity
+  :package: 'com.solaireresort.mysolairemobileapp.SolaireApplication'
+  :appActivity: 'com.solaireresort.mysolairemobileapp.view.activity.SplashActivity'
+  :newCommandTimeout: 300
+
+    appium_lib: {
+      server_url: "http://127.0.0.1/wd/hub"
+    }
+  }

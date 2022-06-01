@@ -1,0 +1,10 @@
+iphone_simulator: --tags=@iphone --tags=~@wip --tags=~@manual SIMULATOR=true DEVICE=iphone AppLocation=external --format progress --format html --out=cukes.html
+iphone_ci: --tags=@iphone --tags=~@wip --tags=~@manual SIMULATOR=true DEVICE=iphone AppLocation=local --format progress --format html --out=cukes.html
+iphone_ci_sanity: --tags=@iphone --tags=~@wip --tags=~@manual --tags=@ios_sanity SIMULATOR=true DEVICE=iphone AppLocation=local --format progress --format html --out=cukes.html
+iphone_lab: --tags=@iphone --tags=@ios_regression SIMULATOR=false DEVICE=iphone AppLocation=external --format progress --format html --out=cukes.html
+ipad_simulator: --tags=@ipad --tags=~@wip --tags=~@manual SIMULATOR=true DEVICE=ipad AppLocation=external --format progress --format html --out=cukes.html
+ipad_ci: --tags=@ipad --tags=~@wip --tags=~@manual --tags=@working SIMUALTOR=true DEVICE=ipad AppLocation=external --format progress --format html --out=cukes.html
+ipad_lab: --tags=@ipad --tags=@ios_regression SIMULATOR=false DEVICE=ipad AppLocation=external --format progress --format html --out=cukes.html
+ipad_lab_sanity: --tags=@ipad --tags=@iphone --tags=@ios_sanity SIMULATOR=false DEVICE=ipad AppLocation=external --format progress --format html --out=cukes.html
+android_ci_rerun: --tags=@android --tags=~@wip --tags=~@manual --tags=~@videoTest recordScreen=true DEVICE=android AppLocation=local --format progress --format html --out=cukes_rerun.html -f rerun --out rerun2.txt
+android: --tags=@android --tags=~@wip --tags=~@manual --tags=~@videoTest recordScreen=true DEVICE=android AppLocation=local --format progress --format html --out=cukes_rerun2.html -f rerun --out rerun3.txt
